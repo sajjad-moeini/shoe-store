@@ -1,0 +1,208 @@
+.singleProduct{
+  
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    background-color: rgb(43, 79, 110);
+    background-color: rgb(116, 129, 124);
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(9,1fr);
+    padding: 1vw;
+}
+.productInfos{
+    grid-area: 1/1/2/13;
+    display: flex;
+    flex-direction: column;
+}
+.product-title-name{
+    color: #fff;
+    margin-top: -.1vw;
+    margin-left: 1vw;
+}
+.product-p-info{
+    color: #fff;
+    margin-top: -1vw;
+}
+.singleProductImg{
+    grid-area: 2/1/8/7;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.productImages{
+    margin-top: 1vw;
+    grid-area: 8/1/11/13;
+    display: flex;
+    justify-content: flex-start;
+}
+.productImages img{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+.productImages img:nth-child(2){
+    margin: 0 .3vw;
+}
+.size{
+    grid-area:2/7/8/13 ;
+    width: 90%;
+    height: 93%;
+    margin: 0 auto;
+    font-size: 1.4vw;
+}
+.size caption{
+    color: rgb(175, 213, 227);
+}
+.size-number{
+    
+    border-radius: 30%;
+    width: 30%;
+    color: aliceblue;
+    background-color: lightskyblue;
+    transition: all .7s;
+    cursor: pointer;
+}
+.size-number:hover{
+    border-radius: 20%;
+    transform: scale(1.1);
+    color: rgb(116, 129, 124);
+    background-color: rgb(233, 233, 192);
+    box-shadow: 0px 0px 10px 0px rgb(123, 157, 169);
+}
+.sizeToggle{
+    border-radius: 20%;
+    transform: scale(1.1);
+    color: rgb(116, 129, 124);
+    background-color: rgb(233, 233, 192);
+    box-shadow: 0px 0px 10px 0px rgb(123, 157, 169);
+}
+.selectedProductBox{
+    grid-area: 11/7/13/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+  margin-right: 3vw;
+}
+.allCoastBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.count{
+    width: 15%;
+    height: 70%;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1vw;
+    outline: 0;
+    background-color: rgb(164, 184, 177);
+    box-shadow: 0px 0px 20px 0px rgb(101, 135, 148);
+    text-align: center;
+}
+
+.allcountTitle{
+    font-size: 2.4vw;
+    color: rgb(188, 209, 216);
+}
+.addBtn{
+    width: 70%;
+  color: #fff;
+  cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.3vw;
+    padding: .7vw .5vw;
+    background-color: rgb(188, 209, 216);
+    box-shadow: 0px 0px 20px 0px rgb(164, 184, 177);
+    animation:  addBtnAnim .6s infinite ;
+}
+.addBtn:hover{
+    animation:  addBtnAnimHover .3s infinite ;
+    color: red;
+    font-weight: 530;
+}
+
+@keyframes addBtnAnim{
+    0%{transform: translateY(10px);}
+    100%{transform: translateY(0);}
+}
+@keyframes addBtnAnimHover{
+    0%{transform: translateY(15px);}
+    100%{transform: translateY(0);}
+}
+.selected-size{
+    color: #fff;
+    font-size: 1.5vw;
+    margin-bottom: -2vw;
+    margin-right: 1vw;
+}
+
+/* .orderedProductInfo{
+    grid-area:11/1/13/7 ;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    height: 100%;
+    gap: 0;
+} */
+.orderedProductInfo{
+    grid-area:11/1/13/7 ;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;   
+    overflow: hidden;
+}
+.orderdInfoTitle{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: start;
+    width: 100%;
+    height: 15%;
+}
+
+.orderdInfo{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: start;
+    width: 100%;
+}
+.orderdInfo h5{
+    color: #fff;
+}
+.orderdProductContainer{
+    margin-top: .5vw;
+}
+.product-count{
+    width: 25%;
+    border: 0;
+    border-radius: .9vw;
+    text-align: center;
+    outline: 0;
+    color: white;
+    background-color: transparent;
+    box-shadow: 0px 1px 10px 0px rgb(129, 150, 163);
+    transition: all .7s;
+}
+.product-count:focus{
+    box-shadow: 0px 1px 12px 0px rgb(22, 59, 82);
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

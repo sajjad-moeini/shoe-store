@@ -1,0 +1,726 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+p {
+    text-align: justify;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.nav-link,
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 1s;
+    text-align: center;
+    padding: .7rem 1.2rem !important;
+    margin: 1px;
+}
+
+.dropdown-menu {
+    padding: 0;
+    /* background-color: #2c5fd641; */
+}
+
+#shopping-cart {
+    font-size: 1.7rem !important;
+    color: aliceblue;
+    margin-left: 3vw;
+    animation: cartAnim 2s infinite;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-badge {
+    display: none;
+    position: absolute;
+    /* display: flex; */
+    width: .6vw;
+    height: .6vw;
+    top: -7 !important;
+    padding: .1vw !important;
+    align-items: center;
+    right: -.5vw !important;
+    border-radius: 50%;
+    justify-content: center;
+    color: rgb(227, 227, 227);
+    background-color: red;
+    font-size: 2vw;
+    animation: cartBadgeAnim 1s infinite alternate;
+}
+
+@keyframes cartBadgeAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+#myMainNav {
+    /* height: 10vh; */
+    background-color: rgba(63, 63, 63, 0.437) !important;
+    align-items: end;
+    padding-bottom: .5vw !important;
+}
+
+#mainNav {
+    width: 80%;
+}
+
+@keyframes cartAnim {
+    0% {
+        transform: scale(.9);
+
+    }
+
+    50% {
+        transform: scale(1.2) rotate(10deg);
+
+    }
+
+    100% {
+        transform: scale(1) rotate(-10deg);
+
+    }
+
+}
+
+.dropdown-item {
+    font-size: 1.2rem;
+    transition: all 1s;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .2px solid #0000001c;
+    background-color: #2c5fd673;
+    color: rgb(242, 85, 68);
+    font-weight: 600;
+}
+
+.badge {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: .8rem;
+    height: 50%;
+
+}
+
+
+.navbar-brand,
+.nav-link {
+    color: aliceblue !important;
+
+}
+
+.navbar-brand:hover,
+.dropdown-item:hover,
+.nav-link:hover {
+    transform: scale(1.05) translateY(10px);
+    color: aliceblue;
+    background-color: #2c5fd6;
+    border-radius: .7rem;
+    box-shadow: 0px -10px 28px 6px rgba(49, 110, 191, 0.82);
+}
+
+.dropdown-item:hover {
+    transform: scale(1.05) translateX(10px) !important;
+}
+
+@media screen and (min-width:776px) {
+
+    .nav-link,
+    .navbar-brand {
+        font-size: 1.4rem;
+        margin: 0px;
+
+    }
+
+    #myMainNav {
+        height: 10vh;
+    }
+
+}
+
+@media screen and (max-width:776px) {
+    .wellcomeTitle {
+        top: 5.8vh !important;
+        height: 94.2vh !important;
+    }
+}
+
+/* navbar end */
+
+/* home content */
+
+.wellcomeTitle {
+    background-color: rgba(240, 248, 255, 0.178);
+    height: 90%;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+
+}
+
+.wellcomeTitle-text {
+    mix-blend-mode: darken;
+    font-size: 4vw !important;
+    color: rgb(4, 14, 48);
+}
+
+/* end home  */
+
+
+/* product start  */
+
+
+
+
+
+.product-container {
+    width: 90vw;
+    height: 85vh;
+    margin: auto !important;
+    margin-top: 2vh !important;
+}
+
+.card-body {
+
+    width: 100%;
+    transition: all .7s;
+    height: 68%;
+    z-index: 1000;
+}
+
+.card-body img {
+    object-fit: cover;
+}
+
+.productBtn {
+    background-color: #5673b7;
+    padding: .4rem .8rem !important;
+    font-size: 1rem;
+    font-weight: 500;
+    color: aliceblue;
+
+}
+
+.card:hover .productBtn {
+    animation: productBtnAnim 1.5s infinite;
+}
+
+.card:hover .card-body {
+    transform: scale(1.05)rotate(-10deg);
+}
+
+.productBtn:hover {
+    background-color: rgb(103, 171, 103);
+    color: aliceblue;
+    animation: 0 !important;
+}
+
+.card-title {
+    color: #5673b7;
+    font-weight: 600 !important;
+}
+
+@keyframes productBtnAnim {
+    25% {
+        color: #5673b76a;
+        background-color: #5673b7c5;
+        transform: scale(1.05)translateY(5px);
+    }
+
+    50% {
+        color: #5673b7ac;
+        background-color: #5673b766;
+        transform: scale(1.1)translateY(5px);
+    }
+
+    100% {
+        color: #0a45cd;
+        background-color: #5673b700;
+        transform: scale(1)translateY(5px);
+    }
+}
+
+
+.carousel-control-prev {
+    left: -5vw !important;
+    width: 5vw !important;
+}
+
+.carousel-control-next {
+    right: -5vw !important;
+    width: 5vw !important;
+}
+
+/* btn start */
+.sport-companyBtn {
+    /* width: 20%; */
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #5673b7;
+    color: aliceblue;
+    padding: .5rem 1.5rem !important;
+    margin: 5px 20px !important;
+}
+
+.sport-companyBtn:hover {
+    background-color: #5673b7;
+    color: aliceblue;
+    animation: sportBtnAnim 1s;
+}
+
+@keyframes sportBtnAnim {
+    0% {
+        background-color: #5673b7;
+        color: aliceblue;
+    }
+
+    50% {
+        background-color: #1e59efb4;
+        color: #949dae;
+        transform: scale(1.2)translateY(10px)rotate(10deg);
+    }
+
+    75% {
+        background-color: #1e59efb4;
+        transform: scale(1.2)translateY(10px)rotate(-10deg);
+    }
+
+    100% {
+        background-color: #5673b7;
+        color: aliceblue;
+    }
+}
+
+.h-60 {
+    height: 60% !important;
+}
+
+
+
+.productBox {
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    background: linear-gradient(100deg, rgb(81, 172, 229), rgb(97, 92, 191));
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 9999;
+}
+
+.product-size-box {
+    background: linear-gradient(70deg, rgb(97, 92, 191), rgb(81, 172, 229));
+}
+
+.productBox-body {
+    height: 60%;
+    width: 100%;
+
+}
+
+.mainPicProduct {
+    object-position: 10% 60%;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+.mainPicProduct:hover {
+    transform: scale(1.5)translateY(5vh);
+    border-radius: 50%;
+}
+
+
+.sizeTable {
+    color: white;
+    margin: auto !important;
+    margin-top: 5vh !important;
+    width: 75%;
+    height: 15vh;
+}
+
+.sizezBtn {
+    border-radius: 50% !important;
+    background-color: #5673b7;
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    transition: all .7s;
+    font-weight: 600;
+    font-size: 1.2rem;
+    /* overflow: hidden; */
+}
+
+.sizezBtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(100deg, rgb(81, 172, 229), rgb(97, 92, 191));
+    color: rgb(175, 188, 124);
+    box-shadow: 0px 0px 15px 7px rgba(81, 172, 229, 0.317);
+
+}
+
+.confirmSize {
+    transform: scale(1.1);
+    background: linear-gradient(100deg, rgb(81, 172, 229), rgb(97, 92, 191));
+    color: rgb(139, 208, 233);
+    box-shadow: 0px 4px 20px 1px rgba(81, 172, 229, 0.858);
+}
+
+.selectedBtn {
+    background: linear-gradient(100deg, rgb(81, 172, 229), rgb(97, 92, 191));
+    color: rgb(249, 250, 246);
+    box-shadow: 0px 4px 20px 10px rgba(81, 172, 229, 0.858);
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50% !important;
+    padding: .5rem !important;
+    transition: all .7s;
+    font-weight: 600;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.selectedBtn:hover {
+    color: aliceblue;
+}
+
+.countBadge {
+    position: absolute !important;
+    top: -30% !important;
+    right: -40%;
+    width: 70%;
+    height: 7% !important;
+
+
+}
+
+.countBadge input {
+    width: 100% !important;
+    text-align: center;
+    height: 50% !important;
+    font-weight: 500;
+
+}
+
+.smPic {
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    padding-left: .1vw !important;
+}
+
+.mymodal-btn {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (min-width:992px) {
+    .mymodal-btn {
+        height: 7%;
+    }
+}
+
+.addBtn {
+    padding: .7vw 1.5vw !important;
+    margin-left: 5vw !important;
+    margin-right: 5vw !important;
+    transition: all .7s;
+    background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)35%);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    margin-top: -10vh !important;
+}
+
+.addBtn:hover {
+    transform: scale(1.2);
+    animation: 0 !important;
+    background: rgb(103, 171, 103);
+}
+
+.clickAddbtn {
+    animation: 0 !important;
+    background: rgb(103, 171, 103);
+    background: linear-gradient(360deg, rgb(103, 171, 103), rgb(183, 209, 183));
+}
+
+.addBtnAnim {
+    animation: addBtnAnim 1s alternate infinite;
+}
+
+.addBtnChooseAnim {
+    animation: addBtnForChoosedAnim .7s alternate infinite;
+}
+
+@keyframes addBtnAnim {
+    25% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)60%);
+        /* transform: translateY(-1.2vw); */
+    }
+
+    50% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)50%);
+        /* transform: translateY(-1.4vw); */
+    }
+
+    75% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)50%);
+        /* transform: translateY(-1.5vw); */
+    }
+
+    100% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)60%);
+        /* transform: translateY(-1.7vw); */
+    }
+}
+
+@keyframes addBtnForChoosedAnim {
+    25% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191));
+        transform: translateY(-1.2vw);
+    }
+
+    50% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)40%);
+        transform: translateY(-1.4vw)rotate(-10deg);
+    }
+
+    75% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)75%);
+        transform: translateY(-1.5vw)rotate(10deg);
+    }
+
+    100% {
+        background: linear-gradient(180deg, rgb(81, 172, 229), rgb(97, 92, 191)100%);
+        transform: translateY(-1.7vw);
+    }
+}
+
+.closeBtn {
+    padding: .7vw 1.5vw !important;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all .7s;
+    margin-top: -10vh !important;
+}
+
+.closeBtn:hover {
+    transform: scale(.7);
+    font-weight: 200;
+    color: #86051b;
+}
+
+.successAdded {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    width: 30%;
+    height: 30%;
+    background: linear-gradient(rgb(93, 178, 195), rgb(245, 247, 245));
+    text-align: center;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 999999;
+}
+
+.successAdded div {
+    margin-top: 20% !important;
+    color: aliceblue;
+}
+
+.successAdded button {
+    align-self: flex-end !important;
+    justify-self: end !important;
+    padding: .4vw .7vw !important;
+    margin-top: 15% !important;
+    margin-right: 7% !important;
+}
+
+.emptyCart {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    width: 35%;
+    height: 35%;
+    background: linear-gradient(360deg, rgb(247, 54, 54), rgb(245, 247, 245));
+    text-align: center;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 999999;
+    justify-content: space-around;
+}
+
+.emptyCardTexts {
+    margin-top: 10% !important;
+    color: rgb(131, 130, 128);
+}
+
+.emptyCartBtn {
+    align-self: flex-end !important;
+    justify-self: end !important;
+    padding: .4vw .7vw !important;
+    margin-top: 15% !important;
+    margin-right: 7% !important;
+    color: white;
+    border: 1px solid white;
+}
+
+.emptyCartBtn:hover {
+    background-color: red;
+    color: white;
+}
+
+.allProductPagination {
+    position: absolute;
+    width: 90%;
+    height: 4vh;
+    z-index: 999;
+    bottom: 3vh !important;
+    left: 5% !important;
+}
+
+.allProductPagination button {
+    background-color: rgb(148, 178, 178);
+    color: white;
+    border: 0;
+    transition: all .7s;
+
+}
+
+.allProductPagination button:hover {
+    color: rgb(148, 139, 139);
+    transform: scale(1.2);
+}
+
+/* .allProductPagination button:focus{
+    color: #2c5fd6 !important;
+    border: 0 !important;
+    box-shadow: 0 !;
+} */
+.allProductPaginationBtnSelect {
+    background-color: whitesmoke !important;
+    color: #2c5fd6 !important;
+    font-weight: 620 !important;
+    box-shadow: 0px 0px 20px 4px #5673b7 !important;
+}
+
+.h-6vh {
+    height: 6vh !important;
+}
+
+.d-nonee {
+    display: none !important;
+}
+
+.signInBtn {
+    padding: .3vw .9vw !important;
+}
+
+.cart {
+    width: 90% !important;
+    height: 90%;
+    background-color: #48619b;
+    margin: auto !important;
+    position: absolute;
+    left: 5% !important;
+    top: 5% !important;
+    opacity: 0;
+    z-index: 0;
+}
+
+.purseBtn {
+    position: absolute;
+    bottom: 20 !important;
+    right: 15;
+    padding: 1vw 1.5vw !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: white;
+    background-color: rgb(96, 138, 223);
+    border: 0;
+    animation: purse .2s  infinite ;
+    transition: all 1s !important;
+}
+.purseBtn:hover{
+    animation: 0 !important;
+    
+    transform: translateY(10px);
+}
+
+@keyframes purse {
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+.closeCart {
+    position: absolute;
+    right: 15 !important;
+    top: 35;
+    font-size: 1.4rem !important;
+}
+.thisTypePrice{
+    font-size: 1.5rem;
+    margin-top: 1.6rem !important;
+}
+.selectedPr .cartBtnContainer{
+    margin-top: 1.5rem !important;
+}
+.totalPriceCart{
+    position: absolute;
+    bottom: 15;
+    left: 15;
+    color: whitesmoke;
+    width: 50%;
+}
+.register{
+    position: relative;
+    width: 60%;
+    height: auto;
+    background-color: #48619b;
+    margin:10vh auto !important;
+    box-shadow: 0px -50px 50px 10px rgba(129, 147, 182, 0.82) inset!important;
+}
+.registerHeader{
+    height: 10vh;
+    width: 100%;
+}
+.closeBtnRegisterCon{
+ display: flex;
+ justify-content: end !important;
+ align-items: center !important;
+}

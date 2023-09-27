@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="singleProduct">
+        <div class="productInfos">
+            <h1 class="product-title-name">shoe</h1>
+            <p class="product-p-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium in eos
+                suscipit repellat reprehenderit debitis facere reiciendis ab molestiae consequuntur.</p>
+        </div>
+        <img src="pics/puma/3/Deviate-NITRO-2-Women-Running-Shoes (4).webp" class="singleProductImg" alt="">
+        <div class="productImages">
+            <img src="pics/puma/3/Deviate-NITRO-2-Wo.webp" alt="" class="allPics">
+            <img src="pics/puma/3/Deviate-NITRO-2-Women-Running-Shoes (4).webp" alt="" class="allPics">
+            <img src="pics/puma/3/Deviate-NITRO-2-Womes-Running-Shoes (3).webp" alt="" class="allPics">
+        </div>
+
+        <table class="size">
+            <caption>Available Sizes</caption>
+            <tr>
+                <th class="size-number">28</th>
+                <th class="size-number">29</th>
+                <th class="size-number">30</th>
+            </tr>
+            <tr>
+                <th class="size-number">31</th>
+                <th class="size-number">32</th>
+                <th class="size-number">33</th>
+            </tr>
+            <tr>
+                <th class="size-number">34</th>
+                <th class="size-number">35</th>
+                <th class="size-number">36</th>
+            </tr>
+            <tr>
+                <th class="size-number">37</th>
+                <th class="size-number">38</th>
+                <th class="size-number">39</th>
+            </tr>
+            <tr>
+                <th class="size-number">40</th>
+                <th class="size-number">41</th>
+                <th class="size-number">42</th>
+            </tr>
+        </table>
+        <div class="orderedProductInfo">
+            <div class="orderdInfoTitle">
+                <h5>Size</h5>
+                <h5>Count</h5>
+                <h5>Price</h5>
+            </div>
+            <div class="orderdProductContainer">
+
+            </div>
+
+        </div>
+        <div class="selectedProductBox">
+            <div class="productPrice">
+                <h3 class="selected-size">Selected Size : </h3>
+            </div>
+            <div class="allCoastBox">
+
+                <h2 class="allcountTitle">$0</h2>
+
+            </div>
+            <button class="addBtn">Add To Cart</button>
+        </div>
+
+    </div>
+</body>
+
+
+
+<script>
+
+    let singleProductImg = document.querySelector('.singleProductImg')
+    let allPics = document.querySelectorAll('.allPics')
+    let sizeBtn = document.querySelectorAll('.size-number')
+    let selectedSizeElem = document.querySelector('.selected-size')
+
+
+
+
+
+    allPics.forEach(pic => {
+        pic.addEventListener('mouseenter', event => {
+            singleProductImg.src = event.target.src
+        })
+    })
+
+    let orderedSize = []
+    sizeBtn.forEach(size => {
+        size.addEventListener('click', e => {
+
+            e.target.classList.toggle('sizeToggle')
+            let sizeValue = +(e.target.innerText)
+
+
+
+            if (!orderedSize.includes(sizeValue)) {
+                orderedSize.push(sizeValue)
+                selectedSizeElem.innerHTML = `Selected Size : ${orderedSize.join(' ')}`
+
+
+
+            } else {
+                let unorderedSizeIndex = orderedSize.indexOf(sizeValue)
+                orderedSize.splice(unorderedSizeIndex, 1)
+
+
+            }
+
+
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
